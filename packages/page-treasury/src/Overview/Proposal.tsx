@@ -23,13 +23,13 @@ interface Props {
 function ProposalDisplay ({ className = '', isMember, members, proposal: { council, id, proposal }, withSend }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
 
-  const hasProposals = useMemo(
-    () => !!council
-      .map(({ votes }) => votes ? votes.index.toNumber() : -1)
-      .filter((index) => index !== -1)
-      .length,
-    [council]
-  );
+  // const hasProposals = useMemo(
+  //   () => !!council
+  //     .map(({ votes }) => votes ? votes.index.toNumber() : -1)
+  //     .filter((index) => index !== -1)
+  //     .length,
+  //   [council]
+  // );
 
   return (
     <tr className={className}>
@@ -48,7 +48,7 @@ function ProposalDisplay ({ className = '', isMember, members, proposal: { counc
       <td className='number'>
         <FormatBalance value={proposal.bond} />
       </td>
-      <td className={hasProposals ? 'middle' : 'button'}>
+      {/* <td className={hasProposals ? 'middle' : 'button'}>
         {hasProposals
           ? <a href='#/council/motions'>{t('Voting')}</a>
           : withSend && (
@@ -59,7 +59,7 @@ function ProposalDisplay ({ className = '', isMember, members, proposal: { counc
             />
           )
         }
-      </td>
+      </td> */}
       <td className='links'>
         <LinkExternal
           data={id}

@@ -20,7 +20,7 @@ interface Props {
 function Overview ({ className, isMember, members }: Props): React.ReactElement<Props> {
   const { api } = useApi();
   const info = useCall<DeriveTreasuryProposals>(api.derive.treasury.proposals);
-
+  // console.log(info)
   return (
     <div className={className}>
       <Summary

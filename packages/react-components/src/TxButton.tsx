@@ -64,6 +64,7 @@ function TxButton ({ accountId, className = '', extrinsic: propsExtrinsic, icon,
 
         assert(api.tx[section] && api.tx[section][method], `Unable to find api.tx.${section}.${method}`);
 
+        console.log(params[1].toNumber());
         extrinsics = [
           api.tx[section][method](...(
             isFunction(params)
@@ -71,6 +72,12 @@ function TxButton ({ accountId, className = '', extrinsic: propsExtrinsic, icon,
               : (params || [])
           ))
         ];
+        console.log(`api.tx[section][method]: api.tx[${section}][${method}]`);
+        console.log(`extrinsics[]`, ...(
+          isFunction(params)
+            ? params()
+            : (params || [])
+        ));
       }
 
       assert(extrinsics?.length, 'Expected generated extrinsic passed to TxButton');

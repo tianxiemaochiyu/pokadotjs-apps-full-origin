@@ -193,7 +193,8 @@ function createWebpack (ENV, context) {
     ]).filter((plugin) => plugin),
     resolve: {
       alias,
-      extensions: ['.js', '.jsx', '.ts', '.tsx']
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      mainFiles: ['index', 'browser', 'main']
     },
     watch: !isProd,
     watchOptions: {
