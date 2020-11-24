@@ -1,0 +1,24 @@
+{
+  "name": "@polkadot/ui-settings",
+  "version": "0.62.2-13",
+  "description": "Manages app settings",
+  "main": "index.js",
+  "sideEffects": false,
+  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "maintainers": [],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "@polkadot/networks": "^4.1.2-2",
+    "@polkadot/util": "^4.1.2-2",
+    "eventemitter3": "^4.0.7",
+    "store": "^2.0.12"
+  },
+  "devDependencies": {
+    "@types/store": "^2.0.2"
+  },
+  "peerDependencies": {
+    "@polkadot/networks": "*",
+    "@polkadot/util": "*"
+  }
+}

@@ -9,7 +9,7 @@ import store from 'store';
 import styled from 'styled-components';
 import { withMulti, withObservable } from '@polkadot/react-api/hoc';
 import keyring from '@polkadot/ui-keyring';
-import keyringOption from '@polkadot/ui-keyring/options';
+import { KeyringOption as keyringOption } from '@polkadot/ui-keyring/options';
 import createKeyringItem from '@polkadot/ui-keyring/options/item';
 import { isNull, isUndefined } from '@polkadot/util';
 
